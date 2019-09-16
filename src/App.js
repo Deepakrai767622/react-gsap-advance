@@ -5,9 +5,9 @@ import './App.css';
 function App() {
   
   let app = useRef(null);
-  let circle = useRef(null)
-  let circleRed = useRef(null)
-  let circleBlue = useRef(null)
+  let circle = useRef(null);
+  let circleRed = useRef(null);
+  let circleBlue = useRef(null);
 
   const [state, setState] = useState(false);
 
@@ -17,7 +17,7 @@ function App() {
   }
 
   const handleShrink = () => {
-    TweenMax.to(circleRed, .8, {width: 75, height: 75, ease: Power3.easeOut})
+    TweenMax.to(circleRed, .8, {width: 75, height: 75, ease: Power3.easeOut});
     setState(false)
   }
 
@@ -26,7 +26,7 @@ function App() {
     // TweenMax.from(circle, .8, {opacity: 0, x: 40, ease: Power3.easeOut})
     // TweenMax.from(circleRed, .8, {opacity: 0, x: 40, ease: Power3.easeOut, delay: .2})
     // TweenMax.from(circleBlue, .8, {opacity: 0, x: 40, ease: Power3.easeOut, delay: .4})
-    TweenMax.staggerFrom([circle, circleRed, circleBlue], .8, {opacity: 0, x: 40, ease: Power3.easeOut}, .2)
+    TweenMax.staggerFrom([circle, circleRed, circleBlue], .8, {opacity: 0, x: 40, ease: Power3.easeOut}, .2);
   }, [])
 
 
